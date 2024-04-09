@@ -1,0 +1,43 @@
+#!/bin/zsh
+# Little script for backing up project files, as well as updating the code in the appendices
+# Used to have version control via Git written into this script but abandoned that - wasn't necessary
+
+
+# ___ COPY CODE INTO WRITEUP ASSETS ___
+# Code used for analysis copied into writeup folder, where it is rendered into the appendices
+# Making copies means we can edit it a bit without compromising the actual files we use
+echo "About to copy code into assets"
+code_path="/Users/ralphbraithwaite/Documents/dissertation/code"
+asset_path="/Users/ralphbraithwaite/Documents/dissertation/writeup/assets/code"
+cp -fr $code_path $asset_path
+echo "Code copied!"
+
+
+# Main code files have newlines for readability
+# but I don't want to have pages worth of the appendices taken up by blank spaces
+echo "Removing blank lines in copied code"
+cd "$asset_path"/code
+for f in data_prep.R exploratory.R survival.R glm.R
+do
+  newfile="new"$f 
+  sed '/^\s*$/d' $f > $newfile #Removes blank lines
+  sed '/^#/d' $newfile > $f #Removes commented lines - those that begin with '#'
+  rm $newfile
+  # No `sed -i` for inplace editing on Mac hence using $newfile as an intermediate
+done
+echo "Done!"
+# ___ COPY ALL OBSIDIAN NOTES TO HERE ___
+# Obsidian is a note taking app, notes are stored on Icloud but I want the relevant ones backed up with the rest of the project
+obs_path="/Users/ralphbraithwaite/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main/Uni"
+here_path="/Users/ralphbraithwaite/Documents/dissertation/obsidian"
+
+echo "About to copy files from Obsidian..."
+cp -fr $obs_path $here_path
+echo "Files copied!"
+
+# ___ OPEN GOOGLE DRIVE ___
+# Opens google drive for me, makes it very easy to upload my work
+open -a /Applications/Arc.app https://drive.google.com/drive/my-drive 
+
+# I did have a git commit section in here but removed it since g-drive has version control
+#

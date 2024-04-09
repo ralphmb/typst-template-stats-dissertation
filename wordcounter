@@ -1,0 +1,19 @@
+#/bin/zsh
+
+# Since I'm not using Word it can be annoying to count the number of words in the project
+# This file counts the number of words in specified source files and adds them up, then echos the section and total counts
+# Since it's counting the source files it isn't perfect - syntax used for layout for instance will be counted
+# Ideally we'd count the number of words in the pdf but this is enough
+
+cd /Users/ralphbraithwaite/Documents/dissertation/writeup/sections
+total=0
+for file in litreview.typ exploratory.typ survival.typ regression.typ introduction.typ
+do
+  if [[ -e $file ]]
+  then
+    wcres=$(wc -w "$file")
+    echo $wcres
+    ((total+=$(echo $wcres | awk '{print $1;}')))
+  fi
+done
+echo "The total is:  $total"
