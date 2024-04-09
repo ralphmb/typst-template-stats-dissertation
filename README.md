@@ -6,8 +6,9 @@ I think I've changed it a bit but it's still almost entirely their work, used un
 The rest is mine. I've removed most of the content except one plot and one reference.
 Feel free to reuse anything if you can find a use for it.
 
-The actual thesis is in writeup/main.typ. If you install typst and compile this using `typst compile main.typ` you'll generate a pdf like 'main.pdf'. The 'sections' folder contains the files for each section - literature review, bibliography etc. 'assets' is where I put all images, large code files to be read etc.
-I also used Typst for the presentation. This is found in presentation/pres.typ. Compiling this will get you a pdf with one slide per page. It uses a package called Polylux.
+The actual thesis can be found under */writeup/*. If you install typst and compile the file *main.typ* using `typst compile main.typ` or `typst watch main.typ` for automatic compilation, you'll generate the file 'main.pdf'. The 'sections' folder contains the files for each section - literature review, bibliography etc. 'assets' is where I put all images, large code files to be read etc.
+
+I also used Typst for the thesis presentation. This is found in presentation/pres.typ. Compiling this will get you a pdf with one slide per page. It uses a package called Polylux.
 
 
 
