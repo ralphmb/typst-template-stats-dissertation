@@ -1,0 +1,11 @@
+#table(
+columns: 5,
+table.cell([Coefficients:], colspan: 5)
+[Variable], [Estimate], [Std. Error], [z value], [Pr(>|z|)],
+[(Intercept)], [0.038], [0.195], [0.194], [0.846],
+[home_or_awayHome], [0.106], [0.101], [1.056], [0.291],
+[distance_groupingfarther], [-0.229], [0.109], [-2.105], [0.035],
+[points2021], [0.010], [0.002], [5.167], [0.000],
+[opponent_points2021], [-0.006], [0.002], [-2.443], [0.015],
+[home_or_awayHome:distance_groupingfarther], [0.323], [0.145], [2.230], [0.026],
+)

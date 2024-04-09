@@ -1,6 +1,6 @@
 == Tables and Plots
 
-Here's a table with some R output, made using `tablemaker.py`.
+Here's a table with some R output. 
 #table(
   columns:4, 
 [Variable],           [Estimate], [Std. Error], [p],

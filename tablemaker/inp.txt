@@ -1,0 +1,8 @@
+Coefficients:
+                                           Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                                0.037884   0.195417   0.194   0.8463    
+home_or_awayHome                           0.106429   0.100773   1.056   0.2909    
+distance_groupingfarther                  -0.229455   0.109013  -2.105   0.0353 *  
+points2021                                 0.010394   0.002012   5.167 2.38e-07 ***
+opponent_points2021                       -0.005595   0.002290  -2.443   0.0146 *  
+home_or_awayHome:distance_groupingfarther  0.322718   0.144729   2.230   0.0258 *

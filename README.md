@@ -10,9 +10,13 @@ Feel free to reuse anything if you can find a use for it.
 
 I use a software called Typst, it's like LaTeX but using markdown-esque syntax.
 
-The Typst documentation can be found at [["https://typst.app/docs/reference/"]], and Reddit/Discord/Stackoverflow can answer most questions about this markup language.
+The Typst documentation can be found at "https://typst.app/docs/reference/", and Reddit/Discord/Stackoverflow can answer most questions about this markup language.
 
 The actual thesis is in writeup/main.typ. If you install typst and compile this using `typst compile main.typ` you'll generate a pdf like 'main.pdf'.
 I also used Typst for the presentation. This is found in presentation/pres.typ. It uses a package called Polylux.
+
+`wordcounter` is a small script I used to check the wordcount while writing. There's definitely better ways to do this but it's a good approximation. It just calls `wc -w` on each relevant source file and adds the results, giving an itemised breakdown.
+`committer` is a script I used for backups. If you're using git version control you could write it in here. It backs up relevant notes from my Obsidian vault, copies code from my working R folder and places it in the writeup assets for addition into appendices, and opens Google Drive in my browser.
+`tablemaker.py` is a script that can take copy-pasted R output and turn it into Typst tables. Since I had to talk about a million different regression models and their coefficients this saved me quite a lot of time. Ideally this might be written in R or Typst itself.
 
 Thanks!
